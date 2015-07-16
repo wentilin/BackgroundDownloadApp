@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zaG-Kr-ezq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Background download-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundDownloadApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okp-td-eMG">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UMg-hb-G0E"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yD6-6h-6Nh"/>
+                                    <barButtonItem systemItem="refresh" id="1Gc-Mf-afB">
+                                        <connections>
+                                            <action selector="initializeAll:" destination="BYZ-38-t0r" id="EIh-nE-spJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npr-9f-uZt">
+                                <rect key="frame" x="233" y="386" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IUB-t0-RDQ"/>
+                                </constraints>
+                                <state key="normal" title="Start All Downloads">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAllDownloads:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkm-Pm-9XF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJV-H5-Ttu">
+                                <rect key="frame" x="233" y="440" width="133" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ea5-mO-028"/>
+                                </constraints>
+                                <state key="normal" title="Stop All Downloads">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAllDownloads:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYf-aa-ZGM"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nQD-BQ-a1r">
+                                <rect key="frame" x="0.0" y="72" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="rgF-xa-cLB"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FileDownloadCellIdentifier" rowHeight="60" id="I9x-3K-uQT">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9x-3K-uQT" id="cwZ-a0-rLu">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIQ-xU-MZ6">
+                                                    <rect key="frame" x="8" y="20" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-Vr-swW">
+                                                    <rect key="frame" x="567" y="15" width="25" height="25"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" image="stop-25"/>
+                                                    <connections>
+                                                        <action selector="stopDownloading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTY-uM-jwA"/>
+                                                    </connections>
+                                                </button>
+                                                <progressView opaque="NO" tag="40" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jgB-7r-Cqt">
+                                                    <rect key="frame" x="8" y="49" width="584" height="2"/>
+                                                </progressView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="50" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AV-9W-qhN">
+                                                    <rect key="frame" x="534" y="19" width="58" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIE-yR-bZ2">
+                                                    <rect key="frame" x="534" y="15" width="25" height="25"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" image="play-25"/>
+                                                    <connections>
+                                                        <action selector="startOrPauseDownloadingSingleFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ua-x8-dpG"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xSj-Vr-swW" firstAttribute="top" secondItem="cwZ-a0-rLu" secondAttribute="topMargin" constant="7" id="413-Hn-abe"/>
+                                                <constraint firstItem="6AV-9W-qhN" firstAttribute="leading" secondItem="cwZ-a0-rLu" secondAttribute="leadingMargin" constant="526" id="4lX-Ah-88G"/>
+                                                <constraint firstItem="6AV-9W-qhN" firstAttribute="centerY" secondItem="cwZ-a0-rLu" secondAttribute="centerY" id="6OM-58-FMB"/>
+                                                <constraint firstItem="rIE-yR-bZ2" firstAttribute="centerY" secondItem="cwZ-a0-rLu" secondAttribute="centerY" constant="-2" id="A2C-t9-cHv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6AV-9W-qhN" secondAttribute="trailing" id="EkD-nO-1qJ"/>
+                                                <constraint firstItem="IIQ-xU-MZ6" firstAttribute="centerY" secondItem="cwZ-a0-rLu" secondAttribute="centerY" constant="1" id="GMZ-MV-Hd3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xSj-Vr-swW" secondAttribute="trailing" id="GXN-g8-fIs"/>
+                                                <constraint firstItem="rIE-yR-bZ2" firstAttribute="top" secondItem="cwZ-a0-rLu" secondAttribute="topMargin" constant="7" id="GqP-Pd-cDt"/>
+                                                <constraint firstItem="xSj-Vr-swW" firstAttribute="centerY" secondItem="rIE-yR-bZ2" secondAttribute="centerY" id="QLu-bE-FCf"/>
+                                                <constraint firstItem="jgB-7r-Cqt" firstAttribute="leading" secondItem="IIQ-xU-MZ6" secondAttribute="leading" id="TFK-al-OP2"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="IIQ-xU-MZ6" secondAttribute="leading" id="Xk9-qV-MD3"/>
+                                                <constraint firstItem="jgB-7r-Cqt" firstAttribute="trailing" secondItem="6AV-9W-qhN" secondAttribute="trailing" id="bYj-M0-dBm"/>
+                                                <constraint firstItem="xSj-Vr-swW" firstAttribute="leading" secondItem="rIE-yR-bZ2" secondAttribute="trailing" constant="8" id="iGY-du-eey"/>
+                                                <constraint firstItem="IIQ-xU-MZ6" firstAttribute="top" secondItem="cwZ-a0-rLu" secondAttribute="topMargin" constant="12" id="qiV-bQ-gE4"/>
+                                                <constraint firstItem="jgB-7r-Cqt" firstAttribute="top" secondItem="IIQ-xU-MZ6" secondAttribute="bottom" constant="8" symbolic="YES" id="z7z-FC-dgo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="leading" secondItem="Okp-td-eMG" secondAttribute="leading" id="3ca-Vo-RSw"/>
+                            <constraint firstItem="AJV-H5-Ttu" firstAttribute="top" secondItem="npr-9f-uZt" secondAttribute="bottom" constant="24" id="3mQ-f9-DWV"/>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7O5-dm-tUb"/>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="trailing" secondItem="Okp-td-eMG" secondAttribute="trailing" id="92x-js-cSZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nQD-BQ-a1r" secondAttribute="trailing" constant="-20" id="DsH-uy-Wll"/>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="centerX" secondItem="npr-9f-uZt" secondAttribute="centerX" id="E1l-vO-J17"/>
+                            <constraint firstItem="npr-9f-uZt" firstAttribute="top" secondItem="nQD-BQ-a1r" secondAttribute="bottom" constant="14" id="Kgg-bE-TwR"/>
+                            <constraint firstItem="Okp-td-eMG" firstAttribute="top" secondItem="AJV-H5-Ttu" secondAttribute="bottom" constant="86" id="WKO-Rx-0Ls"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Okp-td-eMG" secondAttribute="trailing" constant="-20" id="ZXI-Nc-ObO"/>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="centerX" secondItem="AJV-H5-Ttu" secondAttribute="centerX" id="f3g-rR-0SE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Okp-td-eMG" secondAttribute="bottom" id="ibH-92-CAD"/>
+                            <constraint firstItem="nQD-BQ-a1r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rkS-A1-Fsk"/>
+                            <constraint firstItem="Okp-td-eMG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zzY-ft-X1L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Background download" id="sCh-HZ-0lY"/>
+                    <connections>
+                        <outlet property="filesTableView" destination="nQD-BQ-a1r" id="7Af-ZR-ol7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rpK-Y4-JjF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zaG-Kr-ezq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7iQ-Rd-Fjw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o6w-QP-8Ph"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X39-Un-GeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play-25" width="25" height="25"/>
+        <image name="stop-25" width="25" height="25"/>
+    </resources>
+</document>
